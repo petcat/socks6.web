@@ -1,21 +1,125 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+# 图片尺寸 300x200 位置： /themes/frontpage/static/assets/images
+# https://github.com/cowboysmall-tools/hugo-business-frontpage-theme.git
+# https://themes.gohugo.io/hugo-business-frontpage-theme/
+##################################################
+baseURL = "https://socks6.com/"
+languageCode = "en"
+title = "新一代 SOCKS 6 代理技术, 比 SOCKS5 更快更好 | SOCKS Protocol Version 6"
+theme = "socks"
+googleAnalytics = ""
 
-name = "Business Frontpage"
-license = "MIT"
-licenselink = "//github.com/cowboysmall-tools/hugo-business-frontpage-theme/blob/master/LICENSE.md"
-description = "Business Frontpage is a basic HTML starter template for creating a Bootstrap based website for a small business or other organization."
-homepage = "//github.com/cowboysmall-tools/hugo-business-frontpage-theme"
-tags = ["starter", "business", "home", "page"]
-features = ["marketing", "boxes", "responsive"]
-min_version = "0.41"
+[params] # 描述
+    author = "Socks"
+    description = "更新一代 SOCKS 6 代理, 比 SOCKS5 更快更好更理想的代理技术"
 
-[author]
-  name = "Jerry Kiely"
-  homepage = "//github.com/cowboysmall"
+[params.navbar] # 页头菜单项
+	name = "SOCKS 6"
+	url = "https://socks6.com/"
+        [[params.navbar.nav]] # 右侧菜单
+        current = true
+        name = "Home"
+        url = "#"
+        [[params.navbar.nav]]
+        name = "About"
+        url = "#"
+        [[params.navbar.nav]]
+        name = "Services"
+        url = "#"
+        [[params.navbar.nav]]
+        name = "Contact"
+        url = "#"
 
-# If porting an existing theme
-[original]
-  name = "Start Bootstrap"
-  homepage = "//startbootstrap.com/templates/business-frontpage"
-  repo = "//github.com/BlackrockDigital/startbootstrap-business-frontpage"
+[params.header] #蓝底通栏描述
+        name = "下一代 SOCKS 6 版本"
+        tagline = "."
+       #tagline2 = "."
+
+[params.summary] # 说明
+        url = "https://tools.ietf.org/html/draft-olteanu-intarea-socks-6-02"
+        [params.summary.description]
+        [[params.summary.description.items]] #左侧
+        description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!"
+        [[params.summary.description.items]]
+        description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum."
+
+        [params.summary.contact] #右侧 
+        name = "Start Bootstrap"
+        address1 = "3481 Melrose Place"
+        address2 = "Beverly Hills, CA 90210"
+        phone = "(123) 456-7890"
+        email = "me@socks6.com"
+
+[params.projects] #产品项  图片目录: /themes/frontpage/static/assets/images
+        [[params.projects.sections]] # title = "第一栏" 
+        [[params.projects.sections.rows]] # title = "第一栏, 第一列, 123项"
+        [[params.projects.sections.rows.items]] # 1-1
+        title = "JUSTMYSOCKS"
+        description = "真正 CN2 GIA 线路,高速低延迟。优惠码【JMS9272283】"
+        url = "http://i.socks6.com/1"
+        image = "socks.png"  
+        [[params.projects.sections.rows.items]] # 1-2 
+        title = "BITYUN"
+        description = "14元/月起,黑科技加速,年付赠送NETFLIX视听账户，优惠码【QWERTY】"
+        url = "http://i.socks6.com/b"
+        image = "socks.png"
+        [[params.projects.sections.rows.items]] # 1-3
+        title = "V2DY"
+        description = "29元季付或20元不限时100G流量包,适合大多数人的需求"
+        url = "http://i.socks6.com/i"
+        image = "socks.png"
+        [[params.projects.sections.rows]] # title = "第一栏, 第二列, 456项"
+        [[params.projects.sections.rows.items]] # 2-1-4
+        title = "KUYING"
+        description = "这家套餐分了五个层次：免费-标准-高级-白金-至尊，9元月付起步主推是45元/月的IPLC专线，总共有50多个节点，这家亮点是每天签到送流量比较大气(1~5G)，免费白嫖方案还居然有10个节点可选，需要白嫖一定要看一下，想付费建议速鹰"
+        url = "http://i.socks6.com/y"
+        image = "socks6.png"
+        [[params.projects.sections.rows.items]] # 2-2-5 #入门-基础-标准-旗舰
+        title = "SUYING"
+        description = "这家速鹰和酷鹰同属一家，是前面酷鹰的高配版，套餐同样分了五个层次还有个旗舰大流量套餐(88元1.2T流量每月)，套餐9.9月付起步单价都比酷鹰贵一些，但是200多个节点应该是节点最多的机场，就是现在不能免费白嫖了，想白嫖就酷鹰想付费就速鹰"
+        url = "http://i.socks6.com/s"
+        image = "socks6.png"
+        [[params.projects.sections.rows.items]] # 2-3-6
+        title = "QIANGLIE"
+        description = "老机场本人1.99元绝版老套餐已用一年多了，不过之前水平很差，节点少又不太行，后来全线涨价之后倒是发力了线路稳定不少可以一用，目前入门6元月付或33元年付套餐，这家年付是当前已知最为便宜的，由于机场的特殊性本人一向不推荐年付，考虑老机场价格又足够低推荐一下"
+        url = "http://i.socks6.com/q"
+        image = "socks6.png"
+        [[params.projects.sections]] # title = "第二栏"
+        [[params.projects.sections.rows]] # title = "第二栏, 第一列, 789项"
+        [[params.projects.sections.rows.items]] #3-1-7
+        title = "PUD"
+        description = "这家最低38元/季或88元/年月流量都是128G，有近50个节点可选，节点有中转速度还不错，也贴心的提供了一个1元两天的试用套餐，无论测试和临时用用都可以，然后有个5折码50OFF可以试一下5折码还能用值得推荐"
+        url = "http://i.socks6.com/d"
+        image = "s6.png"
+        [[params.projects.sections.rows.items]] #3-2-8
+        title = "SOCLOUD"
+        description = "最低入门套餐35元/季度总共才80G流量，另有20、30、40元月付方案都贵，最多有近50个节点可供选择，也提供一个免费白嫖试用方案，就是签到送的的流量很抠门，只能应急用一下，不过贵有贵的道理这家主打稳和快，就算免费白嫖节点速度用起来也是免费中最好的系列，推荐一下"
+        url = "http://i.socks6.com/o"
+        image = "s6.png"
+        [[params.projects.sections.rows.items]] #3-3-9
+        title = "CUTECLOUD"
+        description = "这家的确可爱，只有一个方案：9元/季度每月300G不限速，虽然便宜也有10来个节点可选，看视频的话白天速度还可以，晚上就一般不太行，不过也对得起这单价，对于不常看视频只用于看网页搜索资料来说完全够用。这是目前找到最便宜季付入门方案，推荐作为备用机场来搭配使用"
+        url = "http://i.socks6.com/9"
+        image = "s6.png"
+        [[params.projects.sections.rows]] # title = "第二栏, 第二列, 101112项"
+        [[params.projects.sections.rows.items]]  #4-1-10
+        title = "AMX"
+        description = "大概是吃货，这家和上面小布丁是同一家，主推IPLC线路，但只有年付没有月付，6折优惠码【40off】后112.8元128G月流量起，还有个1元两天的试用，用于测试或临时用用不错，由于机场的特殊性容易跑路，除非年付特别便宜否则本人都不推荐购买，这里只作信息介绍"
+        url = "http://i.socks6.com/r"
+        image = "socks.png"
+        [[params.projects.sections.rows.items]]  #4-2-11
+        title = "WEST"
+        description = "机场自称是海外学子，但明显水土不服质量实在马马虎虎很一般，价钱也是贵，月付25元或年付188元起，节点虽多但就算最好的线路到了晚上也是不行，唯一优点是可以白嫖，一个邮箱可以免费用三天，对于临时用用紧急用一下的不错，这单价这质量白嫖就好真心不推荐付费购买"
+        url = "http://i.socks6.com/0"
+        image = "socks.png"
+        [[params.projects.sections.rows.items]]  #4-3-12
+        title = "JIYOU"
+        description = "主推IPLC线路，但也时好时坏，全线套餐都涨价了。还把以前低端套餐都清理掉了，包括本人绝版￥1.02月付套餐，TG群禁言，后台客服是摆设，这都是明显污点。目前最低是24元年付10G套餐，不过毕竟是老机场本人也用了快两年，也有点感情综合考虑只给2星推荐"
+        url = "https://jiyou.world/aff.php?aff=386&gid=1"
+        image = "socks.png"
+
+[params.footer]
+        copyright = "SOCKS Protocol Version 6"
+        keyword = "新一代 SOCKS 6 代理技术 比 SOCKS5 更快更好"
+
+
+
